@@ -38,40 +38,35 @@ class Tree
 
             int leftHeight = 0, rightHeight = 0;
 
-            //Calculate the height of left subtree
             if(temp.left != null)
                 leftHeight = findHeight(temp.left);
 
-            //Calculate the height of right subtree
             if(temp.right != null)
                 rightHeight = findHeight(temp.right);
 
-            //Compare height of left subtree and right subtree
-            //and store maximum of two in variable max
             int max = (leftHeight > rightHeight) ? leftHeight : rightHeight;
 
-            //Calculate the total height of tree by adding height of root
             return (max + 1);
-
     }
-
-
 }
 
 class BinarySearchTree
 {
-
     public static void main(String[] args)
     {
         int c , b , i=0;
         int aver = 0;
+        int max = 0;
 
         // Tree size
-        int plus_size=10;
-        int SIZE = 100;
+        int plus_size=100;
+        int SIZE = 1000;
         int[] a = new int[SIZE];
 
-        for (c = 1; c<= 10000; c++)
+        // Visualisation
+        System.out.print("Size | he_1 | he_2 | he_3 | aver | max \n");
+
+        for (c = 1; c<= 1000; c++)
         {
             System.out.print(SIZE + ";");
 
@@ -92,19 +87,22 @@ class BinarySearchTree
 
                 bst.traverse(root);
 
-                aver += bst.findHeight(root);
-                System.out.print(bst.findHeight(root)+";");
 
+                aver += bst.findHeight(root);
+
+                if(max <= bst.findHeight(root)) max = bst.findHeight(root);
+
+                System.out.print(bst.findHeight(root)+";");
 
             }
             aver = aver/3;
-            System.out.print(aver +"\n");
+            System.out.print(aver + ";" + max + "\n");
 
             SIZE += plus_size;
             a = new int[SIZE];
 
             aver = 0;
+            max = 0;
         }
     }
-
 }
