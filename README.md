@@ -4,7 +4,7 @@ Binary Tree (Java) random generations:
 2. Find height tree.
 
 
-Redone(republic) by LinkClink
+Redone by LinkClink
 
 
 
