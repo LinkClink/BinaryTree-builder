@@ -1,11 +1,10 @@
-Binary Tree (Java ) random generations
+Binary Tree (Java) random generations:
 
-1. Generated and insert random binary tree
-2. Find height tree
+1. Generated and insert random binary tree.
+2. Find height tree.
 
 
-Redone by LinkClink
-
+Redone(republic) by LinkClink
 
 
 
