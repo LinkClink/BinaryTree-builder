@@ -1,18 +1,20 @@
-Binary Tree (Java ) random generations
+Binary Tree (Java) random generations:
 
-1. Generated and insert random binary tree
-2. Find heidht tree
-
+1. Generated and insert random binary tree.
+2. Find height tree.
 
 Redone by LinkClink
 
 
-
-
-
 Original links:
+
 https://www.javatpoint.com/program-to-find-the-maximum-depth-or-height-of-a-tree
 http://www.java2novice.com/java-interview-programs/height-of-binary-search-tree-bst/
+
+Example work:
+tree [1000] +step 100;
+
+<img src="https://sun9-26.userapi.com/c850120/v850120533/1e0fdb/rUcINg2ESrs.jpg" width="300">
 
 
 
@@ -76,13 +78,17 @@ class BinarySearchTree
     {
         int c , b , i=0;
         int aver = 0;
+        int max = 0;
 
         // Tree size
-        int plus_size=10;
-        int SIZE = 100;
+        int plus_size=100;
+        int SIZE = 1000;
         int[] a = new int[SIZE];
 
-        for (c = 1; c<= 10000; c++)
+        // Visualisation
+        System.out.print("Size | he_1 | he_2 | he_3 | aver | max \n");
+
+        for (c = 1; c<= 1000; c++)
         {
             System.out.print(SIZE + ";");
 
@@ -103,16 +109,22 @@ class BinarySearchTree
 
                 bst.traverse(root);
 
+
                 aver += bst.findHeight(root);
+
+                if(max <= bst.findHeight(root)) max = bst.findHeight(root);
+
                 System.out.print(bst.findHeight(root)+";");
 
             }
             aver = aver/3;
-            System.out.print(aver +"\n");
+            System.out.print(aver + ";" + max + "\n");
 
             SIZE += plus_size;
             a = new int[SIZE];
 
             aver = 0;
+            max = 0;
         }
     }
+}
