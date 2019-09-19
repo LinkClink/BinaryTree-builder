@@ -3,16 +3,18 @@ Binary Tree (Java) random generations:
 1. Generated and insert random binary tree.
 2. Find height tree.
 
-
 Redone by LinkClink
-
-
 
 
 Original links:
 
 https://www.javatpoint.com/program-to-find-the-maximum-depth-or-height-of-a-tree
 http://www.java2novice.com/java-interview-programs/height-of-binary-search-tree-bst/
+
+Example work:
+tree [1000] +step 100;
+
+<img src="https://sun9-26.userapi.com/c850120/v850120533/1e0fdb/rUcINg2ESrs.jpg" width="300">
 
 
 
